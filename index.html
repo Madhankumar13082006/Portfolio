@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhankumar_Thangaraj Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #000000;
+            border: 1px solid #ddd;
+            width: 200px;
+            text-align: center;
+        }
+        li:hover {
+            background-color: #0a0101;
+        }
+        #details {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="header-text">
+                <h2 style="font-size: 27px; color: aliceblue; padding:10px;">Madhankumar Thangaraj</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+          
+            <br>
+            <br>
+            <section id="home">
+            <div id="intro">
+                <p>Fullstack Developer</p>
+                <br>
+                <h4 style="font-size: 20px; color: aliceblue; margin-left: 2%;">Hii, Iam Madhankumar Thangaraj from <b>kumaraguru college of technology</b> </h4>
+            </div>
+            </section>
+        </div>
+    </div>
+    <section id="About">
+    <div id ="about">
+        <h4>About</h4>
+        <br>
+        <p style="margin-left: 3%;">I know HTML, CSS, and JavaScript to create responsive and 
+            visually appealing websites. I can structure content with HTML, 
+            style it using CSS, and add interactivity with JavaScript. I focus 
+            on writing clean and efficient code to ensure websites are user-friendly. 
+            Additionally, I am learning to enhance my skills and stay updated with web development trends.
+        </p>
+        <ul>
+            <li id="skill">Skills</li>
+            <li id="education">Education</li>
+            <li id="project">Project</li>
+
+        </ul>
+        <h1 id="disp"></h1>
+        <div id="details"></div>
+
+    </div>
+</section>
+<script>
+    // Data for each section
+    const data = {
+        skill: ["Team Lead", "Developer", "Problem-Solver"],
+        education: ["Bachelor's Degree in Computer Science", "Online Certifications", "Workshops"],
+        project: ["Portfolio Website", "Automatic bus dispacher Model", "Tamil inscription Trained Model"]
+    };
+    const listItems = document.querySelectorAll('li');
+    const heading = document.getElementById('disp');
+    const details = document.getElementById('details');
+    listItems.forEach(item => {
+        item.addEventListener('click', () => {
+            heading.textContent = item.textContent; const id = item.id;
+            const info = data[id];
+            if (info) {
+                details.innerHTML = `<ul>${info.map(detail => `<li>${detail}</li>`).join('')}</ul>`;
+            } else {
+                details.textContent = "No details available.";
+            }
+        });
+    });
+</script>
+<section id="portfolio" style="padding: 50px; background-color: #000000; text-align: center;">
+    <h2 style="font-size: 36px; color: #f9f5f5;">My Portfolio</h2>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+        <div style="width: 250px; height: 300px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden;">
+            <img src="TI.jpg" alt="Project 1" style="width: 100%; height: 60%; object-fit: cover;">
+            <div style="padding: 15px;">
+                <h3 style="font-size: 20px; color: #805353;">Tamil Inscription project</h3>
+                <p style="font-size: 14px; color: #777;">The Tamil Inscription project utilizes a combination of advanced technologies to preserve and analyze ancient inscriptions. Optical Character Recognition (OCR) is employed to digitize and convert inscriptions into editable text, while machine learning and AI enhance the accuracy of identifying script patterns. Database management systems store and organize the data, and 3D scanning is used to capture the physical details of inscriptions for virtual exploration. Geographic Information Systems (GIS) map the locations of these inscriptions, and natural language processing (NLP) aids in translating and analyzing the texts. Additionally, digital archives and web platforms ensure accessibility to researchers and the public, enabling a comprehensive understanding of Tamil heritage</p>
+            </div>
+        </div>
+        <div style="width: 250px; height: 300px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden;">
+            <img src="techno 2.0 winners.jpg" alt="Project 2" style="width: 100%; height: 60%; object-fit: cover;">
+            <div style="padding: 15px;">
+                <h3 style="font-size: 20px; color: #805353;">Project Title 2</h3>
+                <p style="font-size: 14px; color: #777;">We Train the automatic bus dispacher project by using AI model ans won the 5k price .</p>
+            </div>
+        
+    </div>
+</section>
+<section id="contact" style="padding: 50px; background-color: #0d0d0d; text-align: center;">
+    <h2 style="font-size: 36px; color: #fdf7f7;">Contact Me</h2>
+    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+        <div style="width: 300px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px;">
+            <h3 style="font-size: 20px; color: #805353;">Email</h3>
+            <p style="font-size: 14px; color: #777;">You can reach me at: <a href="madhankumarthangaraj13@gamil.com" style="color: #007bff; text-decoration: none;">madhankumarthangaraj13@gamil.com</a></p>
+        </div>
+        <div style="width: 300px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px;">
+            <h3 style="font-size: 20px; color: #805353;">Phone</h3>
+            <p style="font-size: 14px; color: #777;">You can also reach me at: <a href="tel:+91 6380894864" style="color: #007bff; text-decoration: none;">+91 6380894864</p>
+        </div>
+        <div style="width: 300px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px;">
+            <h3 style="font-size: 20px; color: #805353;">Social Media</h3>
+            <p style="font-size: 14px; color: #777;">Follow me on my social media:</p>
+            <ul style="list-style-type: none; padding: 0;">
+                <li><a href="https://www.linkedin.com" style="color: #a3aab2; text-decoration: none;">LinkedIn</a></li>
+                <li><a href="https://www.twitter.com" style="color: #a3aab2; text-decoration: none;">Twitter</a></li>
+                <li><a href="https://www.instagram.com" style="color: #a3aab2; text-decoration: none;">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
